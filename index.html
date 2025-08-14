@@ -1,79 +1,209 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V.E. BATIMENT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LOVERING AUTO SALES CA LLC — 2025</title>
+  <meta name="description" content="LOVERING AUTO SALES CA LLC — quality used cars, simple financing, trusted service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #111827; line-height: 1.6; }
-    header, footer { background: #1f2937; color: white; text-align: center; padding: 30px; }
-    nav a { color: #fbbf24; margin: 0 12px; text-decoration: none; font-weight: 600; }
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; text-align: center; }
-    h2 { color: #1f2937; margin-bottom: 20px; font-size: 2.4em; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .gallery img { width: 100%; border-radius: 8px; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;
+    :root{
+      --bg:#0a0e12; --card:#141a1f; --muted:#9fb0c4; --text:#eef4ff;
+      --brand:#5cc8ff; --brand-2:#00e0a4; --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --grad: radial-gradient(60% 80% at 10% 10%, rgba(92,200,255,.25), transparent 60%),
+              radial-gradient(70% 90% at 90% 10%, rgba(0,224,164,.18), transparent 65%),
+              radial-gradient(60% 80% at 50% 90%, rgba(92,255,194,.12), transparent 60%);
     }
-    iframe { width: 100%; height: 300px; border: 0; border-radius: 8px; margin-top: 20px; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block;border-radius:14px}
+    .wrap{width:min(1200px,92%);margin-inline:auto}
+    header.site{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,0)), var(--grad);border-bottom:1px solid rgba(255,255,255,.06)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 6px 20px rgba(92,200,255,.35)}
+    nav a{margin:0 10px;color:var(--muted)}
+    .cta{padding:10px 16px;border:1px solid rgba(255,255,255,.15);border-radius:12px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0 64px}
+    .hero h1{font-size:clamp(32px,4vw,54px);line-height:1.05;margin:.1em 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:14px}
+    .hero .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+    .section{padding:72px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .section h2{font-size:clamp(26px,3vw,38px);margin:0 0 12px}
+    .lead{color:var(--muted);max-width:70ch}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:26px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .span-6{grid-column:span 6} .span-5{grid-column:span 5} .span-7{grid-column:span 7} .span-12{grid-column:span 12}
+    .tag{font-size:12px;letter-spacing:.3px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:12px 18px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#031018;font-weight:700;border:0}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    input,textarea{width:100%;padding:14px 16px;border-radius:12px;background:#0f141a;border:1px solid rgba(255,255,255,.12);color:var(--text)}
+    textarea{min-height:130px;resize:vertical}
+    .footer{padding:32px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+    .tiny{font-size:12px;color:#7f93aa}
+    figure{margin:0} figcaption{color:var(--muted);font-size:12px;margin-top:8px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:22px}.cards{grid-template-columns:1fr}.span-6,.span-5,.span-7,.span-12{grid-column:auto}.contact-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+<header class="site">
+  <div class="wrap topbar">
+    <div class="brand"><div class="logo" aria-hidden="true"></div> LOVERING AUTO SALES CA LLC</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#financing">Financing</a>
+      <a href="#why">Why Us</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
 
-<header>
-  <h1>V.E. BATIMENT</h1>
-  <nav>
-    <a href="#about">Présentation</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Contact</a>
-    <a href="#map">Adresse</a>
-  </nav>
+  <!-- 1. HERO -->
+  <div class="wrap hero" id="home" aria-label="Hero">
+    <div>
+      <span class="pill">Quality Used Cars • Simple Financing • Trusted Service</span>
+      <h1>Drive home happy with LOVERING Auto Sales.</h1>
+      <p class="lead">Hand-picked vehicles, transparent pricing, and fast approvals. Your next car is a click away.</p>
+      <a class="btn" href="#inventory">Browse inventory</a>
+      <p class="tiny" style="margin-top:10px">Email: <a href="mailto:contact@mjmslog.shop">contact@mjmslog.shop</a> • Tel: <a href="tel:+13393459452">+1 (339) 345-9452</a></p>
+    </div>
+    <figure class="card">
+      <img src="https://avatars.mds.yandex.net/i?id=1a176f9ffb541660f3c642940e03dbe37684a135-5344946-images-thumbs&n=13" alt="Showroom hero car" />
+      <figcaption>Fresh arrivals weekly — inspected and ready.</figcaption>
+    </figure>
+  </div>
 </header>
 
-<section id="about">
-  <h2>Présentation</h2>
-  <p>Basée à Les Mureaux, V.E. BATIMENT est une entreprise spécialisée dans la maçonnerie générale et les gros travaux de construction. Grâce à une équipe qualifiée, nous réalisons des chantiers sur mesure en respectant les normes de qualité et de sécurité.</p>
-</section>
+<main>
 
-<section id="services">
-  <h2>Nos Services</h2>
-  <p>Gros œuvre de bâtiment, travaux de maçonnerie, fondations, rénovation structurelle, et accompagnement personnalisé pour tous vos projets de construction.</p>
-</section>
+  <!-- 2. ABOUT -->
+  <section class="section" id="about" aria-label="About">
+    <div class="wrap">
+      <h2>About us</h2>
+      <p class="lead">We’re a California dealership focused on clean titles, fair pricing, and quick, friendly service. Every vehicle is checked and reconditioned for confidence on day one.</p>
+      <div class="cards">
+        <figure class="card span-6">
+          <img src="https://avatars.mds.yandex.net/i?id=ad7788afb639aa778cec80a573c40e3a89ad4e07-4900601-images-thumbs&n=13" alt="Team at the dealership" />
+          <figcaption>Your neighborhood team with nationwide standards.</figcaption>
+        </figure>
+        <div class="card span-6">
+          <div class="tag">Contact</div>
+          <p>Email: <a href="mailto:contact@mjmslog.shop">contact@mjmslog.shop</a><br>Phone: <a href="tel:+13393459452">+1 (339) 345-9452</a></p>
+          <div class="tag" style="margin-top:8px">Hours</div>
+          <p>Mon–Fri: 9:00–18:00 · Sat: 10:00–16:00 · Sun: Closed</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="gallery">
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1570126681032-3a7c41f13b0d?auto=format&fit=crop&w=800&q=80" alt="chantier 1">
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="chantier 2">
-    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="chantier 3">
+  <!-- 3. INVENTORY -->
+  <section class="section" id="inventory" aria-label="Inventory">
+    <div class="wrap">
+      <h2>Featured inventory</h2>
+      <p class="lead">A sample of cars available now. Ask for a full list — we update stock daily.</p>
+
+      <div class="cards">
+        <figure class="card span-6">
+          <img src="https://avatars.mds.yandex.net/i?id=3e58c35ed9f0c4003107c5b7e721b65b156ea399-10877501-images-thumbs&n=13" alt="Sedan silver" />
+          <figcaption>Low-mileage sedans with full service history.</figcaption>
+        </figure>
+        <figure class="card span-6">
+          <img src="https://avatars.mds.yandex.net/i?id=c92895cc4a125de187c852857b8fe0879f573ac4-16481072-images-thumbs&n=13" alt="SUV family car" />
+          <figcaption>Roomy SUVs for work and family trips.</figcaption>
+        </figure>
+        <figure class="card span-6">
+          <img src="https://avatars.mds.yandex.net/i?id=f05dab4dc12951fe7f9b5a5dcb92fd58fbb86394-5280171-images-thumbs&n=13" alt="Sporty coupe" />
+          <figcaption>Sport trims inspected and road-ready.</figcaption>
+        </figure>
+        <figure class="card span-6">
+          <img src="https://avatars.mds.yandex.net/i?id=8b47d8756dda70a99d7d1bc317bb4b3cce938b74-5539192-images-thumbs&n=13" alt="Pickup truck" />
+          <figcaption>Work-ready pickups with towing packages.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FINANCING -->
+  <section class="section" id="financing" aria-label="Financing">
+    <div class="wrap">
+      <h2>Financing made simple</h2>
+      <p class="lead">Good credit, new credit, or rebuilding — we’ll help you find a plan that fits.</p>
+      <div class="cards">
+        <div class="card span-5">
+          <h3>Fast approvals</h3>
+          <p>Apply online and get a decision quickly with competitive rates and clear terms.</p>
+          <a class="btn" href="#contact">Start application</a>
+        </div>
+        <figure class="card span-7">
+          <img src="https://avatars.mds.yandex.net/i?id=f05dab4dc12951fe7f9b5a5dcb92fd58fbb86394-5280171-images-thumbs&n=13" alt="Keys and contract" />
+          <figcaption>Drive away the same day with the right plan.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY US -->
+  <section class="section" id="why" aria-label="Why choose us">
+    <div class="wrap">
+      <h2>Why choose LOVERING</h2>
+      <p class="lead">Transparent pricing, friendly staff, and cars you can trust.</p>
+      <div class="cards">
+        <div class="card span-6">
+          <h3>Inspected vehicles</h3>
+          <p>Every unit goes through a multi-point inspection and reconditioning.</p>
+        </div>
+        <div class="card span-6">
+          <h3>No pressure</h3>
+          <p>Clear out-the-door pricing and test drives at your pace.</p>
+        </div>
+        <figure class="card span-12">
+          <img src="https://avatars.mds.yandex.net/i?id=ad7788afb639aa778cec80a573c40e3a89ad4e07-4900601-images-thumbs&n=13" alt="Happy customers" />
+          <figcaption>Hundreds of satisfied drivers across California.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" aria-label="Contact">
+    <div class="wrap">
+      <h2>Contact us</h2>
+      <p class="lead">Tell us the car you’re looking for. We’ll confirm availability and options.</p>
+      <div class="contact-grid">
+        <div class="card">
+          <form onsubmit="event.preventDefault(); alert('Thank you! We will reach out shortly.');">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+              <div><label class="tag">Full name</label><input required placeholder="Your name"></div>
+              <div><label class="tag">Email</label><input type="email" required placeholder="you@example.com"></div>
+            </div>
+            <div style="margin-top:14px"><label class="tag">Message</label><textarea placeholder="Model, budget, trade-in…"></textarea></div>
+            <button class="btn" type="submit">Send</button>
+            <p class="tiny" style="margin-top:10px">Or reach us at <a href="mailto:contact@mjmslog.shop">contact@mjmslog.shop</a> · <a href="tel:+13393459452">+1 (339) 345-9452</a></p>
+          </form>
+        </div>
+        <figure class="card">
+          <img src="https://avatars.mds.yandex.net/i?id=1a176f9ffb541660f3c642940e03dbe37684a135-5344946-images-thumbs&n=13" alt="Dealership front" />
+          <figcaption>Visit our lot — test drives welcome.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+      <div class="tiny">© <span id="y"></span> LOVERING AUTO SALES CA LLC. All rights reserved.</div>
+      <div class="tiny">Email: contact@mjmslog.shop • Tel: +1 (339) 345-9452</div>
+    </div>
   </div>
-</section>
-
-<section id="contact">
-  <h2>Contactez-nous</h2>
-  <p>Email : contact@vebatiment.shop</p>
-  <p>Téléphone : +33 6 05 99 64 90</p>
-  <form class="contact-form">
-    <input type="text" placeholder="Nom">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Votre message"></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
-
-<section id="map">
-  <h2>Adresse</h2>
-  <p>66 Avenue du Maréchal Foch, 78130 Les Mureaux, France</p>
-  <iframe src="https://www.google.com/maps?q=66+Avenue+du+Mar%C3%A9chal+Foch,+Les+Mureaux,+France&output=embed" allowfullscreen loading="lazy"></iframe>
-</section>
-
-<footer>
-  &copy; 2025 V.E. BATIMENT — Tous droits réservés
 </footer>
 
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
